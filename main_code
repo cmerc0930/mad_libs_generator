@@ -1,0 +1,27 @@
+def mad_libs_generator():
+    while True:
+        # Define a Mad Libs template with placeholders for user input
+        mad_libs_template = "Once upon a time, in a {adjective} {place}, there lived a {noun}. " \
+                            "One day, the {noun} decided to {verb} {adverb}. It was a {adjective} day!"
+
+        # Prompt the user for words to fill in the placeholders
+        adjective = input("Enter an adjective: ")
+        place = input("Enter a place: ")
+        noun = input("Enter a noun: ")
+        verb = input("Enter a verb: ")
+        adverb = input("Enter an adverb: ")
+
+        # Replace placeholders with user input in the Mad Libs template
+        mad_libs_story = mad_libs_template.format(adjective=adjective, place=place, noun=noun, verb=verb, adverb=adverb)
+
+        # Display the completed Mad Libs story
+        print("\nYour Mad Libs Story:\n")
+        print(mad_libs_story)
+
+        # Ask the user if they want to play again
+        play_again = input("\nDo you want to play again? (yes/no): ").lower()
+        if play_again != 'yes':
+            break
+
+# Run the Mad Libs generator
+mad_libs_generator()
